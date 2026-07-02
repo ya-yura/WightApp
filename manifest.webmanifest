@@ -1,0 +1,21 @@
+{
+  "name": "Килограмм - калькулятор цены за кг",
+  "short_name": "Килограмм",
+  "description": "Калькулятор цены за килограмм для быстрых сравнений товаров по весу и стоимости.",
+  "lang": "ru",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f7f9f4",
+  "theme_color": "#f7f9f4",
+  "categories": ["utilities", "shopping", "finance"],
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

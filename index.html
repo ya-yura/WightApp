@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f9f4">
+  <meta name="description" content="Калькулятор цены за килограмм для быстрых сравнений в магазине.">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Килограмм">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>Килограмм</title>
+</head>
+<body>
+  <main class="shell">
+    <header class="top"><div class="mark">▦</div><div><h1>Килограмм</h1><p>цена, вес и выгода без лишних касаний</p></div><button class="icon" type="button" aria-label="История">↺</button><button class="icon quiet" type="button" aria-label="Настройки">☷</button></header>
+    <section class="result" aria-live="polite"><div class="meta"><span id="result-label">Цена за кг</span><span>↕</span></div><div class="value"><span id="result-value">0</span><span id="result-unit">₽/кг</span></div><div class="sub" id="result-sub">Введите любые две цифры, третья появится сразу</div></section>
+    <section class="modes" aria-label="Что вычислить"><button class="mode active" data-mode="unitPrice"><strong>Цена за кг</strong><small>цена + вес</small></button><button class="mode" data-mode="price"><strong>Цена</strong><small>вес + цена/кг</small></button><button class="mode" data-mode="weight"><strong>Вес</strong><small>цена + цена/кг</small></button></section>
+    <section class="entry" aria-label="Цифровой ввод">
+      <label class="field" data-field="price"><span><b>Цена</b><small>цифры</small></span><span class="wrap"><input id="price" inputmode="decimal" value="159.90" aria-label="Цена"><span>₽</span></span></label>
+      <label class="field" data-field="weight"><span><b>Вес</b><small>цифры</small></span><span class="wrap"><input id="weight" inputmode="decimal" value="450" aria-label="Вес"><span>г</span></span></label>
+      <label class="field computed" data-field="unitPrice"><span><b>Цена за кг</b><small>вычисляется</small></span><span class="wrap"><input id="unitPrice" inputmode="decimal" disabled aria-label="Цена за кг"><span>₽/кг</span></span></label>
+      <div class="chips"><button class="chip" data-weight="100">100 г</button><button class="chip" data-weight="250">250 г</button><button class="chip" data-weight="500">500 г</button><button class="chip" data-weight="1000">1 кг</button></div>
+    </section>
+    <section class="actions"><button class="secondary" id="clear" type="button">↺ Очистить</button><button class="primary" id="save" type="button">▣ Сохранить</button></section>
+    <section><div class="feed-head"><div><p>Лента измерений</p><h2>С чем сравнить</h2></div><button class="mini" id="reset" type="button">◴ Пример</button></div><div class="compare" id="compare"></div><div class="rows" id="rows"></div></section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
